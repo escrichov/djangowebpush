@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="vapid-key" content="{{ vapid_key }}">
+    <title>Web Push</title>
+    <link href="{% static '/css/styles.css' %}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+</head>
+
+<body>
+    <div>
+        <form id="send-push_form">
+            <h3 class="header">Send a push notification</h3>
+            <p class="error"></p>
+            <input type="text" name="head" placeholder="Title">
+            <textarea name="body" id="" cols="30" rows="10" placeholder="Body"></textarea>
+            <button>Send Me</button>
+        </form>
+    </div>
+    <script src="{% static '/js/site.js' %}"></script>
+    <script src="{% static '/js/registerSw.js' %}"></script>
+</body>
+</html>
